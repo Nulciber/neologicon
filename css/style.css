@@ -323,75 +323,57 @@ a:hover {
   border-bottom: none !important;    /* pas de soulignement */
 }
 
-/* === TABLEAUX NEOLIGICON (BLINDÉ) === */
+/* === TABLEAUX STYLE ENCYCLOPÉDIE (V2) === */
 
-/* 1. Le conteneur */
 .table-wrapper {
-  width: 100%;
   overflow-x: auto;
-  margin: 20px 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 2em 0;
   border-radius: 6px;
+  /* Ombre portée pour détacher le tableau du fond */
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.15); 
 }
 
-/* 2. Le tableau lui-même */
-.table-wrapper table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  background-color: #ffffff !important;
-  font-family: Georgia, serif !important;
-  color: #003366 !important;
-  margin: 0 !important;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  font-family: Georgia, serif;
+  color: #003366;
+  /* Suppression des bordures latérales qui posaient problème */
+  border: 1px solid #99BBFF; 
 }
 
-/* 3. Les cellules d'en-tête (TH) */
-.table-wrapper table thead th {
-  background-color: #003366 !important;
-  color: #ffffff !important;
-  padding: 15px !important;
-  text-align: left !important;
-  font-weight: bold !important;
-  border: 1px solid #003366 !important;
-  text-transform: uppercase !important;
-  font-size: 0.9rem !important;
+/* En-têtes : Fond bleu foncé, texte blanc */
+thead th {
+  background: #003366;
+  color: #ffffff;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #6699FF; /* Séparation nette avec le corps */
 }
 
-/* 4. Les cellules de données (TD) */
-.table-wrapper table tbody td {
-  padding: 12px 15px !important;
-  border: 1px solid #99BBFF !important;
-  vertical-align: top !important;
-  line-height: 1.5 !important;
+/* Cellules du corps */
+tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #E0ECFF; /* Ligne de séparation fine */
+  vertical-align: top;
 }
 
-/* 5. Lignes paires (fond légèrement bleuté) */
-.table-wrapper table tbody tr:nth-child(even) {
-  background-color: #F0F6FF !important;
+/* Lignes paires : fond très légèrement bleuté */
+tbody tr:nth-child(even) {
+  background-color: #F0F6FF;
 }
 
-/* 6. Effet de survol */
-.table-wrapper table tbody tr:hover {
-  background-color: #E0ECFF !important;
-  cursor: default;
+/* Effet de survol : fond bleu clair */
+tbody tr:hover {
+  background-color: #E0ECFF;
 }
-IMPORTANT : Votre HTML doit correspondre EXACTEMENT à cette structure :
 
-html
-Copier
-<div class="table-wrapper">
-  <table>
-    <thead>
-      <tr>
-        <th>Titre 1</th>
-        <th>Titre 2</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Donnée 1</td>
-        <td>Donnée 2</td>
-      </tr>
-      <!-- Autres lignes -->
-    </tbody>
-  </table>
-</div>
+/* Responsive */
+@media (max-width: 480px) {
+  th, td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}
