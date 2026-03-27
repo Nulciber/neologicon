@@ -323,14 +323,14 @@ a:hover {
   border-bottom: none !important;    /* pas de soulignement */
 }
 
-/* === TABLEAUX STYLE ENCYCLOPÉDIE === */
+/* === TABLEAUX STYLE ENCYCLOPÉDIE (V2) === */
 
-/* Conteneur pour permettre le défilement sur mobile */
 .table-wrapper {
   overflow-x: auto;
   margin: 2em 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.1);
+  border-radius: 6px;
+  /* Ombre portée pour détacher le tableau du fond */
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.15); 
 }
 
 table {
@@ -338,53 +338,42 @@ table {
   border-collapse: collapse;
   background: #ffffff;
   font-family: Georgia, serif;
-  font-size: 1rem; /* S'adapte à la taille de base du body */
   color: #003366;
+  /* Suppression des bordures latérales qui posaient problème */
+  border: 1px solid #99BBFF; 
 }
 
-/* En-têtes */
+/* En-têtes : Fond bleu foncé, texte blanc */
 thead th {
-  background: #003366;      /* Bleu foncé du logo/header */
+  background: #003366;
   color: #ffffff;
-  padding: 15px;
+  padding: 12px 15px;
   text-align: left;
   font-weight: bold;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  font-size: 0.9rem;
+  border-bottom: 2px solid #6699FF; /* Séparation nette avec le corps */
 }
 
-/* Lignes du corps */
-tbody tr {
-  border-bottom: 1px solid #E0ECFF; /* Séparation subtile */
-  transition: background 0.2s ease;
-}
-
-tbody tr:nth-child(even) {
-  background: #F5F9FF; /* Alternance très légère (bleu blanc cassé) */
-}
-
-tbody tr:hover {
-  background: #E0ECFF; /* Bleu clair du header au survol */
-}
-
-/* Cellules */
-td, th {
+/* Cellules du corps */
+tbody td {
   padding: 12px 15px;
+  border-bottom: 1px solid #E0ECFF; /* Ligne de séparation fine */
   vertical-align: top;
-  line-height: 1.6;
 }
 
-/* Bordure latérale décorative (optionnel, rappel du style global) */
-table {
-  border-left: 4px solid #99BBFF;
-  border-right: 4px solid #99BBFF;
+/* Lignes paires : fond très légèrement bleuté */
+tbody tr:nth-child(even) {
+  background-color: #F0F6FF;
 }
 
-/* Responsive : ajustement sur très petits écrans */
+/* Effet de survol : fond bleu clair */
+tbody tr:hover {
+  background-color: #E0ECFF;
+}
+
+/* Responsive */
 @media (max-width: 480px) {
   th, td {
-    padding: 10px;
-    font-size: 0.95rem;
+    padding: 8px 10px;
+    font-size: 0.9rem;
   }
 }
