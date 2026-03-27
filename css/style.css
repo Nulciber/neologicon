@@ -1,0 +1,325 @@
+/* RESET simple */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  font-size: 20px;   /* ou ajuste selon ton confort */
+  line-height: 1.6;
+  background: #ffffff;
+  color: #000000;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+
+
+/* Bloc logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #003366;  /* bleu foncé pour contraste */
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+}
+
+.logo span {
+  color: #003366;  
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* HEADER */
+header {
+  background: #E0ECFF; /* bleu très clair */
+  color: #003366;      /* bleu foncé */
+  padding: 10px 20px;
+  border-bottom: 2px solid #99BBFF; /* petite bordure décorative */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #003366;           /* bleu foncé */
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background: #99BBFF;      /* bleu moyen clair */
+  color: #ffffff;           /* texte blanc au survol */
+  border-radius: 4px;
+}
+
+/* MAIN */
+main {
+  padding: 20px;
+}
+
+main p {
+  /*font-size: 1.1rem;   /* un peu plus gros (par défaut c'est ~1rem = 16px) */
+  line-height: 1.7;    /* plus d’espace entre les lignes */
+  margin-bottom: 1.2em;
+}
+
+/* FOOTER */
+footer {
+  background: #99BBFF; /* bleu moyen clair */
+  color: #003366;      /* bleu foncé */
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  border-top: 2px solid #E0ECFF;
+}
+
+/* Navigation de base */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Bouton hamburger caché par défaut */
+.hamburger {
+  display: none;
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: #003366; /* bleu foncé */
+  cursor: pointer;
+}
+
+/* Mode mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #E0ECFF; /* bleu clair */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    border-left: 2px solid #99BBFF;
+    border-bottom: 2px solid #99BBFF;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Messages de page */
+.page-message {
+  margin-top: 1em;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  background: #E0ECFF; /* bleu clair */
+  border: 1px solid #99BBFF;
+  color: #003366;
+}
+
+.page-message.accueil { background: #D6E4FF; }
+.page-message.page1   { background: #CCE0FF; }
+.page-message.page2   { background: #B3D1FF; }
+.page-message.page3   { background: #99BBFF; color: #ffffff; }
+.page-message.contact { background: #6699FF; color: #ffffff; }
+
+/* Style pour les pages des Animaginaux */
+.animaginaux-nav {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #E0ECFF;        /* bleu clair */
+  border: 1px solid #99BBFF;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;            /* passe à la ligne si trop d’éléments */
+  gap: 15px;
+}
+
+.animaginaux-nav a {
+  display: inline-block;      /* contrôle de la boîte */
+  padding: 6px 10px;          /* padding fixe */
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;  /* transition fluide */
+}
+
+.animaginaux-nav a:hover {
+  background: #6699FF;
+  color: #ffffff;
+}
+
+/* === Images style encyclopédie === */
+.animaginaux-figure {
+  display: block;
+  margin: 2em auto;
+  max-width: 37.5%;   /* taille par défaut sur grand écran */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+.animaginaux-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Légende cachée par défaut */
+.animaginaux-figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 51, 102, 0.8);
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 6px 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Affichage au survol */
+.animaginaux-figure:hover figcaption {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .animaginaux-figure {
+    max-width: 70%;
+  }
+}
+@media (max-width: 480px) {
+  .animaginaux-figure {
+    max-width: 90%;
+  }
+}
+
+/* Navigation alphabétique du Glossaire */
+.glossaire-nav {
+  margin-top: 20px;
+  padding: 10px;
+  background: #E0ECFF;
+  border: 1px solid #99BBFF;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;     /* les lettres passent à la ligne si besoin */
+  gap: 10px;
+  justify-content: center;
+}
+
+.glossaire-nav a {
+  display: inline-block;
+  padding: 6px 10px;
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.glossaire-nav a:hover {
+  background: #6699FF;
+  color: #ffffff;
+}
+
+/* Fiches du glossaire */
+.lexi-fiche {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.lexi-fiche h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #003366;
+}
+
+.lexi-fiche .prononciation {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.lexi-fiche h3 {
+  margin-top: 1em;
+  font-size: 0.9rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.lexi-fiche ol {
+  margin-left: 1.2em;
+}
+
+.lexi-fiche .voir-aussi {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(0,0,0,.2);
+  font-style: italic;
+}
+
+/* === Style global des liens (contenu uniquement) === */
+a {
+  color: inherit;
+  text-decoration: none;             /* supprime le soulignement bleu par défaut */
+  border-bottom: 1px dashed #ccc;    /* soulignement en pointillé gris clair */
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease;
+}
+
+a:hover {
+  border-bottom-color: #666;         /* plus foncé au survol */
+}
+
+/* Exceptions : menus et bannières de navigation */
+.nav-links a,
+.glossaire-nav a,
+.animaginaux-nav a {
+  border-bottom: none !important;    /* pas de soulignement */
+}
+
