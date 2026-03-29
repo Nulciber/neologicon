@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     glossaire: "pages/glossaire/glossaire.html",
     chorale: "pages/chorale/chorale.html",
     "chorale-info":"pages/chorale/info.html",
-    "chorale-prochaineMesse":"pages/chorale/prochaineMesse.html"
+    "chorale-prochaineMesse":"pages/chorale/prochaineMesse.html",
+    psaumes: "pages/chorale/psaues.html"
     
     // ← facile d’en ajouter d’autres
 
