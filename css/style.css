@@ -7,7 +7,7 @@
 
 body {
   font-family: Georgia, serif;
-  font-size: 20px;   /* ou ajuste selon ton confort */
+  font-size: 20px;
   line-height: 1.6;
   background: #ffffff;
   color: #000000;
@@ -16,8 +16,6 @@ body {
   padding: 0 20px;
 }
 
-
-
 /* Bloc logo */
 .logo {
   display: flex;
@@ -25,7 +23,7 @@ body {
   gap: 8px;
   font-size: 20px;
   font-weight: bold;
-  color: #003366;  /* bleu foncé pour contraste */
+  color: #003366;
 }
 
 .logo-img {
@@ -34,28 +32,23 @@ body {
 }
 
 .logo span {
-  color: #003366;  
+  color: #003366;
   font-size: 20px;
   font-weight: bold;
 }
 
 /* HEADER */
 header {
-  background: #E0ECFF; /* bleu très clair */
-  color: #003366;      /* bleu foncé */
+  background: #E0ECFF;
+  color: #003366;
   padding: 10px 20px;
-  border-bottom: 2px solid #99BBFF; /* petite bordure décorative */
+  border-bottom: 2px solid #99BBFF;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  font-size: 1.2em;
-  font-weight: bold;
 }
 
 .nav-links {
@@ -65,15 +58,15 @@ header {
 }
 
 .nav-links a {
-  color: #003366;           /* bleu foncé */
+  color: #003366;
   text-decoration: none;
   padding: 5px 10px;
   transition: background 0.3s, color 0.3s;
 }
 
 .nav-links a:hover {
-  background: #99BBFF;      /* bleu moyen clair */
-  color: #ffffff;           /* texte blanc au survol */
+  background: #99BBFF;
+  color: #ffffff;
   border-radius: 4px;
 }
 
@@ -83,35 +76,27 @@ main {
 }
 
 main p {
-  /*font-size: 1.1rem;   /* un peu plus gros (par défaut c'est ~1rem = 16px) */
-  line-height: 1.7;    /* plus d’espace entre les lignes */
+  line-height: 1.7;
   margin-bottom: 1.2em;
 }
 
 /* FOOTER */
 footer {
-  background: #99BBFF; /* bleu moyen clair */
-  color: #003366;      /* bleu foncé */
+  background: #99BBFF;
+  color: #003366;
   text-align: center;
   padding: 15px;
   margin-top: 30px;
   border-top: 2px solid #E0ECFF;
 }
 
-/* Navigation de base */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Bouton hamburger caché par défaut */
+/* Bouton hamburger */
 .hamburger {
   display: none;
   font-size: 1.5em;
   background: none;
   border: none;
-  color: #003366; /* bleu foncé */
+  color: #003366;
   cursor: pointer;
 }
 
@@ -120,7 +105,7 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #E0ECFF; /* bleu clair */
+    background: #E0ECFF;
     position: absolute;
     top: 60px;
     right: 0;
@@ -146,7 +131,7 @@ footer {
   border-radius: 8px;
   font-weight: bold;
   text-align: center;
-  background: #E0ECFF; /* bleu clair */
+  background: #E0ECFF;
   border: 1px solid #99BBFF;
   color: #003366;
 }
@@ -157,26 +142,26 @@ footer {
 .page-message.page3   { background: #99BBFF; color: #ffffff; }
 .page-message.contact { background: #6699FF; color: #ffffff; }
 
-/* Style pour les pages des Animaginaux */
+/* Navigation Animaginaux */
 .animaginaux-nav {
   margin-bottom: 20px;
   padding: 10px;
-  background: #E0ECFF;        /* bleu clair */
+  background: #E0ECFF;
   border: 1px solid #99BBFF;
   border-radius: 6px;
   display: flex;
-  flex-wrap: wrap;            /* passe à la ligne si trop d’éléments */
+  flex-wrap: wrap;
   gap: 15px;
 }
 
 .animaginaux-nav a {
-  display: inline-block;      /* contrôle de la boîte */
-  padding: 6px 10px;          /* padding fixe */
+  display: inline-block;
+  padding: 6px 10px;
   color: #003366;
   text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
-  transition: background 0.3s, color 0.3s;  /* transition fluide */
+  transition: background 0.3s, color 0.3s;
 }
 
 .animaginaux-nav a:hover {
@@ -184,11 +169,11 @@ footer {
   color: #ffffff;
 }
 
-/* === Images style encyclopédie === */
+/* Images style encyclopédie */
 .animaginaux-figure {
   display: block;
   margin: 2em auto;
-  max-width: 37.5%;   /* taille par défaut sur grand écran */
+  max-width: 37.5%;
   border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -202,7 +187,6 @@ footer {
   height: auto;
 }
 
-/* Légende cachée par défaut */
 .animaginaux-figure figcaption {
   position: absolute;
   bottom: 0;
@@ -217,24 +201,18 @@ footer {
   transition: opacity 0.3s ease;
 }
 
-/* Affichage au survol */
 .animaginaux-figure:hover figcaption {
   opacity: 1;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .animaginaux-figure {
-    max-width: 70%;
-  }
+  .animaginaux-figure { max-width: 70%; }
 }
 @media (max-width: 480px) {
-  .animaginaux-figure {
-    max-width: 90%;
-  }
+  .animaginaux-figure { max-width: 90%; }
 }
 
-/* Navigation alphabétique du Glossaire */
+/* Navigation Glossaire */
 .glossaire-nav {
   margin-top: 20px;
   padding: 10px;
@@ -242,7 +220,7 @@ footer {
   border: 1px solid #99BBFF;
   border-radius: 6px;
   display: flex;
-  flex-wrap: wrap;     /* les lettres passent à la ligne si besoin */
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
 }
@@ -292,9 +270,7 @@ footer {
   color: #333;
 }
 
-.lexi-fiche ol {
-  margin-left: 1.2em;
-}
+.lexi-fiche ol { margin-left: 1.2em; }
 
 .lexi-fiche .voir-aussi {
   margin-top: 15px;
@@ -306,20 +282,187 @@ footer {
 /* === Style global des liens (contenu uniquement) === */
 a {
   color: inherit;
-  text-decoration: none;             /* supprime le soulignement bleu par défaut */
-  border-bottom: 1px dashed #ccc;    /* soulignement en pointillé gris clair */
+  text-decoration: none;
+  border-bottom: 1px dashed #ccc;
   padding-bottom: 2px;
   transition: border-color 0.3s ease;
 }
 
 a:hover {
-  border-bottom-color: #666;         /* plus foncé au survol */
+  border-bottom-color: #666;
 }
 
-/* Exceptions : menus et bannières de navigation */
+/* Exceptions : menus et bannières de navigation (pas de soulignement) */
 .nav-links a,
 .glossaire-nav a,
-.animaginaux-nav a {
-  border-bottom: none !important;    /* pas de soulignement */
+.animaginaux-nav a,
+.dropdown-content li a {
+  border-bottom: none !important;
 }
 
+/* ========================================= */
+/* CORRECTION DU MENU DÉROULANT (SOUS-MENUS) */
+/* ========================================= */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Le conteneur du sous-menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff; /* Fond blanc */
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 51, 102, 0.2); /* Ombre bleutée */
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  border-radius: 4px;
+  border: 1px solid #99BBFF; /* Bordure bleue claire */
+}
+
+/* Liens dans le sous-menu */
+.dropdown-content li a {
+  color: #003366 !important; /* Texte bleu foncé obligatoirement */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #E0ECFF; /* Séparateur bleu très clair */
+  font-weight: normal;
+  background-color: #ffffff;
+}
+
+/* Survol des liens du sous-menu */
+.dropdown-content li a:hover {
+  background-color: #E0ECFF !important; /* Fond bleu clair au survol */
+  color: #003366 !important; /* Texte reste bleu foncé */
+  border-bottom-color: #99BBFF;
+}
+
+/* Affichage au survol (Desktop uniquement) */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropbtn::after {
+    content: " ▼";
+    font-size: 0.7em;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+}
+
+/* Adaptation Mobile */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background-color: #D6E4FF; /* Fond légèrement plus foncé pour distinguer sur mobile */
+    padding-left: 15px;
+    display: none; /* Caché par défaut sur mobile, géré par JS */
+  }
+  
+  .dropdown-content li a {
+    border-bottom: 1px solid #99BBFF;
+    font-size: 0.9em;
+    color: #003366 !important;
+    background-color: #D6E4FF !important;
+  }
+  
+  .dropdown-content li a:hover {
+    background-color: #99BBFF !important;
+    color: #ffffff !important;
+  }
+}
+/* ========================================= */
+/* STYLE DES TABLEAUX (Charte Neologicon)    */
+/* ========================================= */
+
+/* Conteneur pour permettre le scroll sur mobile si le tableau est large */
+.table-responsive {
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  font-family: Georgia, serif;
+  font-size: 0.95em; /* Légèrement plus petit que le texte courant pour la lisibilité */
+  min-width: 600px; /* Force le scroll sur très petits écrans */
+}
+
+/* En-tête du tableau */
+thead tr {
+  background-color: #003366; /* Bleu foncé */
+  color: #ffffff;
+  text-align: left;
+}
+
+thead th {
+  padding: 15px 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+}
+
+/* Corps du tableau */
+tbody tr {
+  border-bottom: 1px solid #99BBFF;
+  transition: background-color 0.2s ease;
+}
+
+/* Cellules du corps */
+tbody td {
+  padding: 12px 18px;
+  color: #003366;
+  border: none;
+}
+
+/* Alternance des couleurs (Zebra striping) */
+tbody tr:nth-of-type(even) {
+  background-color: #E0ECFF; /* Bleu très clair */
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: #ffffff; /* Blanc */
+}
+
+/* Effet au survol d'une ligne */
+tbody tr:hover {
+  background-color: #D6E4FF; /* Bleu intermédiaire */
+  cursor: default;
+}
+
+/* Dernière ligne sans bordure */
+tbody tr:last-of-type {
+  border-bottom: 2px solid #003366;
+}
+
+/* Adaptation Mobile */
+@media (max-width: 768px) {
+  .table-responsive {
+    border: 1px solid #99BBFF;
+  }
+  
+  thead th {
+    font-size: 0.85em;
+    padding: 10px;
+  }
+  
+  tbody td {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+}

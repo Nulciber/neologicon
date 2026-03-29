@@ -36,7 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
     index: "index.html",
     animaginaux: "pages/animaginaux/animaginaux.html",
     glossaire: "pages/glossaire/glossaire.html",
-    legendes: "pages/legendes/legendes.html" // ← facile d’en ajouter d’autres
+    chorale: "pages/chorale/chorale.html",
+    "chorale-info":"pages/chorale/info.html",
+    "chorale-prochaineMesse":"pages/chorale/prochaineMesse.html"
+    
+    // ← facile d’en ajouter d’autres
+
+
   };
 
   // Fonction utilitaire pour mettre à jour les liens d’un conteneur
@@ -87,4 +93,37 @@ document.addEventListener("DOMContentLoaded", () => {
   } else if (path.includes("legendes")) {
     console.log("Page Légendes détectée");
   }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Sélectionne tous les éléments ayant la classe dropdown
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('.dropbtn');
+    
+    // Gestion du clic sur mobile (ou tactile)
+    link.addEventListener('click', (e) => {
+      // Vérifie si on est sur un écran mobile (moins de 769px)
+      if (window.innerWidth <= 768) {
+        e.preventDefault(); // Empêche la navigation immédiate
+        
+        // Basculer l'affichage du sous-menu
+        const content = dropdown.querySelector('.dropdown-content');
+        const isVisible = content.style.display === 'block';
+        
+        // Ferme les autres sous-menus ouverts (optionnel, pour la propreté)
+        document.querySelectorAll('.dropdown-content').forEach(el => el.style.display = 'none');
+        
+        content.style.display = isVisible ? 'none' : 'block';
+      }
+    });
+  });
+
+  // Fermer les menus si on clique ailleurs sur la page
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown-content').forEach(el => el.style.display = 'none');
+    }
+  });
 });
