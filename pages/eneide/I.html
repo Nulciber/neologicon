@@ -8,11 +8,29 @@
     <link rel="stylesheet" href="../../css/style.css">
 
     <style>
-        /* Styles de base pour le tableau */
+        /* 1. Alignement vertical de base pour tout le tableau */
         main table td,
         main table th {
-            vertical-align: top !important;
-            text-align: left;
+            vertical-align: baseline !important;
+            
+        }
+
+        /* 2. Style des colonnes étroites (alignement à droite) */
+        .col-espacement {
+            width: 3ch;
+            min-width: 3ch;
+            max-width: 3ch;
+            padding: 0 !important;
+            margin: 0;
+            border: none;
+            background: transparent;
+            text-align: right !important; 
+        }
+
+        /* 3. Style des paragraphes dans le tableau (UNIQUEMENT pour le texte principal) */
+        main table td p {
+            margin-bottom: 0.5em;
+            margin-top: 0;
         }
 
         .page-header-container {
@@ -22,7 +40,8 @@
 
         main table td p {
             margin-bottom: 0.5em;
-            text-align: left;
+
+            
         }
 
         /* STYLE DE LA BULLE */
@@ -73,12 +92,17 @@
             <table>
                 <thead>
                     <tr>
+                        <!-- Colonne d'espacement gauche (alignée à droite) -->
+                        <th class="col-espacement">&nbsp;</th>
                         <th>L'arrivée en Afrique</th>
+                        <!-- Colonne d'espacement milieu (alignée à droite) -->
+                        <th class="col-espacement">&nbsp;</th>
                         <th>Liber primus</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td class="col-espacement">&nbsp;</td>
                         <td>
                             <p>
                                 <span id="info-1" class="declencheur-bulle">Je chante les combats et l'homme</span> qui d'abord<br>
@@ -92,6 +116,7 @@
                                 les Albins nos aïeux et les hauts murs de Rome.<br>
                             </p>
                         </td>
+                        <td class="col-espacement">&nbsp;</td>
                         <td>
                             <p>
                                 arma uirumque cano; Troiæ qui primus ab oris<br>
@@ -105,6 +130,7 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="col-espacement">&nbsp;10</td>
                         <td>
                             <p><span id="info-3" class="declencheur-bulle">Muse</span>, rappelle-moi les causes, quelle offense<br>
                                 Quelle blessure a fait que la reine des Dieux<br>
@@ -113,11 +139,13 @@
                                 Les Dieux connaissent-ils de tels ressentiments?<br>
                             </p>
                         </td>
+                        <td class="col-espacement">&nbsp;</td>
                         <td>
                             <p>musa, mihi causas memora, quo numine læso<br></p>
                         </td>
                     </tr>
                     <tr>
+                        <td class="col-espacement">&nbsp;150</td>
                         <td>
                             <p>Une antique cité de colons tyriens<br>
                                 <span id="info-2" class="declencheur-bulle">Carthage</span>, regardait l'Italie et, de loin,<br>
@@ -130,9 +158,11 @@
                                 Si le destin le veut, l'empire de la terre.<br>
                             </p>
                         </td>
-                        <td><p></p></td>
+                        <td class="col-espacement">&nbsp;</td>
+                        <td><p>&nbsp;</p></td>
                     </tr>
                     <tr>
+                        <td class="col-espacement">&nbsp;</td>
                         <td>
                             <p>Mais elle avait appris que du sang des Troyens<br>
                                 Une race naissait qui devait renverser<br>
@@ -141,9 +171,11 @@
                                 Funeste à la Lybie: ainsi filaeint les Parques<br>
                             </p>
                         </td>
-                        <td><p></p></td>
+                        <td class="col-espacement">&nbsp;</td>
+                        <td><p>&nbsp;</p></td>
                     </tr>
                     <tr>
+                        <td class="col-espacement">&nbsp;</td>
                         <td>
                             <p>Alarmée et songeant aux combats que jadis<br>
                                 Elle avait devant Troie affrontés pour ses Grecs,<br>
@@ -159,7 +191,8 @@
                                 Tant d'efforts dut coûter la naissance de Rome!<br>
                             </p>
                         </td>
-                        <td><p></p></td>
+                        <td class="col-espacement">&nbsp;</td>
+                        <td><p>&nbsp;</p></td>
                     </tr>
                 </tbody>
             </table>

@@ -84,7 +84,7 @@ main p {
 footer {
   background: #99BBFF;
   color: #003366;
-  text-align: center;
+  /*text-align: center;*/
   padding: 15px;
   margin-top: 30px;
   border-top: 2px solid #E0ECFF;
@@ -130,7 +130,7 @@ footer {
   padding: 10px;
   border-radius: 8px;
   font-weight: bold;
-  text-align: center;
+  /*text-align: center;*/
   background: #E0ECFF;
   border: 1px solid #99BBFF;
   color: #003366;
@@ -195,7 +195,7 @@ footer {
   background: rgba(0, 51, 102, 0.8);
   color: #fff;
   font-size: 0.9rem;
-  text-align: center;
+  /*text-align: center;*/
   padding: 6px 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -407,7 +407,7 @@ table {
 thead tr {
   background-color: #003366; /* Bleu foncé */
   color: #ffffff;
-  text-align: left;
+  /*text-align: left;*/
 }
 
 thead th {
@@ -468,3 +468,4 @@ tbody tr:last-of-type {
   }
 }
 /* FIN DU FICHIER - Les styles d'info-bulles ont été supprimés car gérés dans le HTML */
+
