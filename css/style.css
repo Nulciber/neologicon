@@ -469,7 +469,3 @@ tbody tr:last-of-type {
 }
 /* FIN DU FICHIER - Les styles d'info-bulles ont été supprimés car gérés dans le HTML */
 
-td.col-espacement p, th.col-espacement p {
-    text-align: right !important;
-    margin: 0 !important;
-}
