@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (container) {
       fetch(path)
         .then(res => {
+          // CORRECTION 1 : Suppression du <br> dans la chaîne
           if (!res.ok) throw new Error(`Impossible de charger ${path}`);
           return res.text();
         })
@@ -34,20 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // Table de routage (cas particuliers)
   const routes = {
     index: "index.html",
-    animaginaux: "pages/animaginaux/animaginaux.html",
+    eneide: "pages/eneide/eneide.html",
     glossaire: "pages/glossaire/glossaire.html",
     chorale: "pages/chorale/chorale.html",
     "chorale-info":"pages/chorale/info.html",
     "chorale-prochaineMesse":"pages/chorale/prochaineMesse.html",
-    psaumes: "pages/chorale/psaues.html"
-    
-    // ← facile d’en ajouter d’autres
-
-
+    // CORRECTION 2 : psaumes (orthographe) et cohérence de la clé
+    "chorale-psaumes": "pages/chorale/psaumes.html" 
   };
 
-  // Fonction utilitaire pour mettre à jour les liens d’un conteneur
+  // Fonction utilitaire pour mettre à jour les liens d'un conteneur
   function updateLinks(containerSelector) {
+    // CORRECTION 3 : Suppression du <br> dans le sélecteur et le chemin
     document.querySelectorAll(`${containerSelector} a[data-link]`).forEach(a => {
       const target = a.getAttribute("data-link");
       if (routes[target]) {
@@ -86,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- Logs debug ---
   if (path.endsWith("index.html") || path.endsWith("/")) {
-    console.log("Bienvenue sur la page d’accueil !");
+    console.log("Bienvenue sur la page d'accueil !");
   } else if (path.includes("animaginaux")) {
     console.log("Page Animaginaux détectée");
   } else if (path.includes("glossaire")) {

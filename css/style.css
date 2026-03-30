@@ -381,6 +381,7 @@ a:hover {
     color: #ffffff !important;
   }
 }
+
 /* ========================================= */
 /* STYLE DES TABLEAUX (Charte Neologicon)    */
 /* ========================================= */
@@ -466,3 +467,4 @@ tbody tr:last-of-type {
     font-size: 0.9em;
   }
 }
+/* FIN DU FICHIER - Les styles d'info-bulles ont été supprimés car gérés dans le HTML */
